@@ -112,7 +112,7 @@
 <meta property="og:image" content="http://yoursite.com/Users/yulin/Documents/docs/Calendar_1/scroll.png">
 <meta property="og:image" content="http://yoursite.com/Users/yulin/Documents/docs/Calendar_1/shift.png">
 <meta property="og:image" content="http://yoursite.com/Users/yulin/Documents/docs/Calendar_1/result.png">
-<meta property="og:updated_time" content="2019-02-26T23:41:48.762Z">
+<meta property="og:updated_time" content="2019-02-26T23:46:00.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to implement a iOS calendar(1)">
 <meta name="twitter:description" content="Recently I found a light and simple calendar app Continuo, which could help us keep track of our day-to-day activities. So I’m trying to implement a similar application by myself, and the first step i">
@@ -341,7 +341,7 @@
                 
               
 
-              <time title="Created: 2019-02-26 15:40:02 / Modified: 15:41:48" itemprop="dateCreated datePublished" datetime="2019-02-26T15:40:02-08:00">2019-02-26</time>
+              <time title="Created: 2019-02-26 15:40:02 / Modified: 15:46:00" itemprop="dateCreated datePublished" datetime="2019-02-26T15:40:02-08:00">2019-02-26</time>
             
 
             
@@ -401,12 +401,12 @@
 
       
         <p>Recently I found a light and simple calendar app <em>Continuo</em>, which could help us keep track of our day-to-day activities. So I’m trying to implement a similar application by myself, and the first step is to implement a calendar.</p>
-<p>####What we need to implement a Calendar </p>
-<p>Actually Apple doesn’t provide a calendar component for us. So we can either create one by ourselves or use one already developed. And I decided to create a calendar component.</p>
+<h4 id="What-we-need-to-implement-a-Calendar"><a href="#What-we-need-to-implement-a-Calendar" class="headerlink" title="What we need to implement a Calendar"></a>What we need to implement a Calendar</h4><p>Actually Apple doesn’t provide a calendar component for us. So we can either create one by ourselves or use one already developed. And I decided to create a calendar component.</p>
 <p>For the <strong>UI</strong>:</p>
 <p><strong>UICollectionView</strong> is the best way to be the container of a calendar. Each section is a month, and each cell represent a day.</p>
 <p>For the <strong>datas</strong>:</p>
 <p>We need to know how many days per month? What day of the way is a first day in a specific week? NSCalendar encapsulates all information about the systems of calendar, so we will use it to prepare the data source of our collectionview.</p>
+<hr>
 <h4 id="How-to-use-NSCalendar-to-get-date-information-we-need"><a href="#How-to-use-NSCalendar-to-get-date-information-we-need" class="headerlink" title="How to use NSCalendar to get date information we need"></a>How to use NSCalendar to get date information we need</h4><ol>
 <li><p>The number of weeks in a specific month (Including some dates don’t belong to this month)</p>
 <ul>
@@ -471,6 +471,7 @@
 </ol>
 <p>​    <em>ps: Calculating the content offset based on <strong>collectionViewLayout</strong>, it may not be updated immediately after <strong>[collectionView reloadData]</strong>, we can call <strong>[layout invalidateLayout]</strong> and <strong>[layout prepareLayout]</strong> to force the update of collectionViewLayout.</em></p>
 <p><img src="/Users/yulin/Documents/docs/Calendar_1/shift.png" alt="image-20190226112215672"></p>
+<hr>
 <p>In the end, we have implemented a simple infinite scrollable Calendar component. The key is to get date information by using NSCalendar.</p>
 <p><img src="/Users/yulin/Documents/docs/Calendar_1/result.png" alt="image-20190226112441189"></p>
 
@@ -505,22 +506,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/02/26/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -593,7 +578,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -646,7 +631,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#How-to-use-NSCalendar-to-get-date-information-we-need"><span class="nav-number">1.</span> <span class="nav-text">How to use NSCalendar to get date information we need</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Display-dates"><span class="nav-number">2.</span> <span class="nav-text">Display dates</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-we-need-to-implement-a-Calendar"><span class="nav-number">1.</span> <span class="nav-text">What we need to implement a Calendar</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#How-to-use-NSCalendar-to-get-date-information-we-need"><span class="nav-number">2.</span> <span class="nav-text">How to use NSCalendar to get date information we need</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Display-dates"><span class="nav-number">3.</span> <span class="nav-text">Display dates</span></a></li></ol></div>
             
 
           </div>
